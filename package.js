@@ -1,10 +1,10 @@
 Package.describe({
-  name: 'useful:usersession',
+  name: 'useful:persistent-session',
   version: '0.0.1-rc1',
   // Brief, one-line summary of the package.
-  summary: 'Persistent variables unique to each user',
+  summary: 'Persistent state variables unique to each user',
   // URL to the Git repository containing the source code for this package.
-  git: '',
+  git: 'https://github.com/usefulio/persistent-session.git',
   // By default, Meteor will default to using README.md for documentation.
   // To avoid submitting documentation, set this field to null.
   documentation: 'README.md'
@@ -20,8 +20,8 @@ Package.onUse(function(api) {
   api.use('check');
   api.use('accounts-base');
 
-  api.addFiles('usersession.js');
-  api.addFiles('usersession-server.js', 'server');
+  api.addFiles('persistent-session.js');
+  api.addFiles('persistent-session-server.js', 'server');
 
   api.export('UserSession');
   api.export('UserSessionVariables');
@@ -36,7 +36,7 @@ Package.onTest(function(api) {
   api.use('accounts-password');
 
 
-  api.use('useful:usersession');
-  api.addFiles('usersession-tests.html');
-  api.addFiles('usersession-tests.js');
+  api.use('useful:persistent-session');
+  api.addFiles('persistent-session-tests.html');
+  api.addFiles('persistent-session-tests.js');
 });
