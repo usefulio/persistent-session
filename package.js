@@ -1,8 +1,8 @@
 Package.describe({
   name: 'useful:usersession',
-  version: '0.0.1',
+  version: '0.0.1-rc1',
   // Brief, one-line summary of the package.
-  summary: '',
+  summary: 'Persistent variables unique to each user',
   // URL to the Git repository containing the source code for this package.
   git: '',
   // By default, Meteor will default to using README.md for documentation.
